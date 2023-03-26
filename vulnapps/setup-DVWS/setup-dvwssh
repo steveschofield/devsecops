@@ -12,13 +12,13 @@
 echo "setting up DevSecOps DVWA damn vulnerable web application"
 cd /apps
 
-sudo apt install mysql-server –y 
-sudo apt install php –y 
+sudo apt install mysql-server -y 
+sudo apt install php -y 
 #sudo apt install php8.1-gd
 #sudo apt install php8.1-mysql
-sudo apt install apache2 –y 
-sudo apt install net-tools –y 
-sudo apt install nano –y 
+sudo apt install apache2 -y 
+sudo apt install net-tools -y 
+sudo apt install nano -y 
 sudo apt install net-tools 
 sudo apt install iputils-ping 
 sudo apt install dnsutils 
