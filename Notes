@@ -1,0 +1,139 @@
+Git Reminder notes
+git status 
+git add README.md  
+git commit -m "security : trying to push and see if works" 
+git push origin main 
+git status 
+
+Credit for list 
+https://www.linkedin.com/feed/update/urn:li:activity:7044647122381484032/ 
+
+ 
+echo "#AWSGoat : A Damn Vulnerable AWS Infrastructure" 
+git clone https://github.com/ine-labs/AWSGoat 
+
+echo "#AzureGoat : A Damn Vulnerable Azure Infrastructure" 
+git clone https://github.com/JOSHUAJEBARAJ/GCP-Goat 
+
+echo "#GCPGoat: A Damn Vulnerable GCP Infrastructure" 
+git clone https://lnkd.in/dMVmNuvZ  
+
+echo "#DeFi: Damn Vulnerable DeFi" 
+git clone https://lnkd.in/dbWesvxW  
+
+echo "#Webpentest: A Damn Vulnerable Web Application" 
+git clone https://github.com/digininja/DVWA 
+
+#My notes
+sudo apt install apache2 
+sudo service apache2 start 
+cd /var/www/html 
+sudo ln –s /vulnapps/DVWA DVWA 
+sudo chmod -R 777 DVWA 
+cp /var/www/html/DVWA/config/config.inc.php.dist /var/www/html/DVWA/config/config.inc.php 
+sudo apt install php8.2-gd 
+sudo cp /etc/php/8.1/apache2/php.ini /etc/php/8.1/apache2/php.ini.originl 
+sudo service mysql start 
+https://www.golinuxcloud.com/install-dvwa-kali-linux/ 
+sudo mysql -u root -p 
+create user 'dvwa'@'127.0.0.1' identified by 'p@ssw0rd'; 
+grant all privileges on dvwa.* to 'user'@'127.0.0.1' identified by 'pass'; 
+https://www.google.com/recaptcha/admin 
+
+echo "Damn Vulnerable Web Application Docker container" 
+git clone https://github.com/opsxcq/docker-vulnerable-dvwa 
+
+#My Notes
+docker build -t vulnerables/web-dvwa . 
+docker run --rm -it -p 80:80 vulnerables/web-dvwa 
+Open Safari / Chrome http://x.x.x.x/setup.php
+
+echo "#API: A Damn Vulnerable Web Sockets" 
+git clone https://github.com/snoopysecurity/dvws-node 
+
+echo "#Mobile: Damn Vulnerable Hybrid Mobile App" 
+git clone https://github.com/logicalhacking/DVHMA 
+
+echo "#CICD: Deliberately vulnerable CI/CD environment" 
+git clone https://github.com/cider-security-research/cicd-goat 
+
+echo "#GraphQL: Damn Vulnerable GraphQL Application" 
+git clone https://github.com/dolevf/Damn-Vulnerable-GraphQL-Application 
+
+echo "#Webservice: Damn Vulnerable Web Services" 
+git clone https://github.com/snoopysecurity/dvws 
+
+echo "#VamPI: Vulnerable API" 
+git clone https://github.com/erev0s/VAmPI 
+
+echo "#DVSA: Damn Vulnerable Serverless Application" 
+git clone https://github.com/OWASP/DVSA 
+
+echo "#DVTA: DVTA is a Vulnerable Thick Client Application" 
+git clone https://github.com/srini0x00/dvta 
+
+echo "#DVJA: Damn Vulnerable Java Application" 
+git clone https://github.com/appsecco/dvja 
+
+echo "#DVID: Damn Vulnerable IoT Device" 
+git clone https://github.com/Vulcainreo/DVID 
+
+echo "#DVPWA: Damn Vulnerable Python Web Application" 
+git clone https://github.com/anxolerd/dvpwa 
+
+echo "#DVAS: Damn Vulnerable Application Scanner (PDF file)" 
+git clone https://ceur-ws.org/Vol-2940/paper36.pdf 
+
+echo "#DVB: Damn Vulnerable Bank" 
+git clone https://github.com/rewanthtammana/Damn-Vulnerable-Bank/ 
+
+echo "#DVWPS: Damn Vulnerable WordPress Site" 
+git clone https://github.com/vianasw/dvwps 
+
+echo "#DVNA: Damn Vulnerable NodeJS Application" 
+git clone https://github.com/appsecco/dvna 
+
+echo "#DVRA: Damn Vulnerable Ruby on Rails" 
+git clone https://github.com/guilleiguaran/dvra 
+
+echo "#DVGM: Damn Vulnerable Grade Management" 
+git clone https://git.logicalhacking.com/BrowserSecurity/DVGM 
+
+echo "#Tiredful" 
+git clone https://github.com/payatu/Tiredful-API/ 
+
+#My Notes
+docker build -t 52pickup-homelab-tiredfulapi . 
+docker run -p 808:80 -it -d 52pickup-homelab-tiredfulapi  
+docker run -p 8000:8000 --name 52pickup-homelab-tiredfulapi -it 52pickup-homelab-tiredfulapi 
+
+echo "#DVCSharp: Damn Vulnerable Cecho "# Application" 
+git clone https://github.com/appsecco/dvcsharp-api 
+
+echo "#DVHMA: Damn Vulnerable Hybrid Mobile App" 
+git clone https://github.com/logicalhacking/DVHMA 
+
+echo "#DVIA: Damn Vulnerable iOS App" 
+git clone https://github.com/prateek147/DVIA 
+
+echo "#DVIA2: Damn Vulnerable iOS App 2" 
+git clone https://github.com/prateek147/DVIA-v2 
+
+echo "#DVRF: Damn Vulnerable Router Firmware" 
+git clone https://github.com/praetorian-inc/DVRF 
+
+echo "#DVFaaS: Damn Vulnerable Functions as a Service" 
+git clone https://github.com/we45/DVFaaS-Damn-Vulnerable-Functions-as-a-Service 
+
+echo "#DVCA: Damn Vulnerable Cloud Application" 
+git clone https://github.com/m6a-UdS/dvca 
+ 
+
+#Run Dastardly 
+docker run --user $(id -u) --rm -v $(pwd):/tmp -e DASTARDLY_TARGET_URL=http://192.168.86.38:8000 -e DASTARDLY_OUTPUT_FILE=/tmp/dastardly-report.xml public.ecr.aws/portswigger/dastardly:latest 
+sudo pip install junit2html 
+git clone https://github.com/inorton/junit2html 
+
+cd junit2html 
+junit2html /tmp/dastardly-report.xml /tmp/dastardly-report.xml.html 
+open /Applications/Safari.app /tmp/dastardly-report.xml.html 
