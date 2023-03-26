@@ -6,7 +6,8 @@
 # -Network connectivty
 # -DNS is setup
 # -sudo apt install git –y 
-# -sudo mkdir /apps 
+# -sudo mkdir /apps
+# -sudo mkdir /apps/webapps
 # -sudo chmod -R 777 /apps
 
 echo "setting up DevSecOps DVWA damn vulnerable web application"
@@ -14,8 +15,10 @@ cd /apps
 
 sudo apt install mysql-server -y 
 sudo apt install php -y 
-#sudo apt install php8.1-gd
-#sudo apt install php8.1-mysql
+phpVer=$(echo "/etc/php/8.1/apache2/php.ini" | sed 's/.*php\///;s/\/.*//')
+sudo apt install php${phpVer}-gd -y
+sudo apt install php${phpVer}-mysql -y
+sudo cp /etc/php/${phpVer}/apache2/php.ini /etc/php/${phpVer}/apache2/php.ini.original
 sudo apt install apache2 -y 
 sudo apt install net-tools -y 
 sudo apt install nano -y 

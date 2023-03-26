@@ -24,17 +24,22 @@ git clone https://lnkd.in/dbWesvxW
 echo "#Webpentest: A Damn Vulnerable Web Application" 
 git clone https://github.com/digininja/DVWA 
 
-#My notes
-sudo apt install apache2 
+#pre-script notes# 
+#-Ubuntu Server is setup
+# -Network connectivty
+# -DNS is setup
+# -sudo apt install git -y 
+# -sudo mkdir /apps
+# -sudo mkdir /apps/webapps
+# -sudo chmod -R 777 /apps
+
+#My Setup notes
 sudo service apache2 start 
 cd /var/www/html 
-sudo ln –s /vulnapps/DVWA DVWA 
+sudo ln –s /apps/webapps/DVWA DVWA
 sudo chmod -R 777 DVWA 
 cp /var/www/html/DVWA/config/config.inc.php.dist /var/www/html/DVWA/config/config.inc.php 
-sudo apt install php8.2-gd 
-sudo cp /etc/php/8.1/apache2/php.ini /etc/php/8.1/apache2/php.ini.originl 
-sudo service mysql start 
-https://www.golinuxcloud.com/install-dvwa-kali-linux/ 
+sudo service mysql start
 sudo mysql -u root -p 
 create user 'dvwa'@'127.0.0.1' identified by 'p@ssw0rd'; 
 grant all privileges on dvwa.* to 'user'@'127.0.0.1' identified by 'pass'; 
