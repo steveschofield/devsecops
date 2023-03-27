@@ -1,13 +1,9 @@
-Git Reminder notes
-git status 
-git add README.md  
-git commit -m "security : trying to push and see if works" 
-git push origin main 
-git status 
+# Vulnerable Apps links 
 
-Credit for list 
+Credit for list provided by **Joas A Santos**.  
 https://www.linkedin.com/feed/update/urn:li:activity:7044647122381484032/ 
 
+This is a list I'm using for quick **copy and paste** when testing new Vulnerability Scanners.  I'm a **homelab junkie** trying in a controlled environment.  I've been using https://ubuntu.com server **minimized** for my base server OS.  When possible, I like to use container images 
  
 echo "#AWSGoat : A Damn Vulnerable AWS Infrastructure" 
 git clone https://github.com/ine-labs/AWSGoat 
@@ -23,32 +19,38 @@ git clone https://lnkd.in/dbWesvxW
 
 echo "#Webpentest: A Damn Vulnerable Web Application" 
  
-#pre-script notes# 
+##Pre-script notes# 
 #-Ubuntu Server is setup
-# -Network connectivty
-# -DNS is setup
-# -sudo apt install git -y 
-# -sudo mkdir /apps
-# -sudo mkdir /apps/webapps
-# -sudo chmod -R 777 /apps
+### -Network connectivty
+### -DNS is setup
+### -sudo apt install git -y 
+### -sudo mkdir /apps
+### -sudo mkdir /apps/webapps
+### -sudo chmod -R 777 /apps
 
-#My Setup notes
+### My Setup notes
 git clone https://github.com/digininja/DVWA
 sudo service apache2 start 
 cd /var/www/html 
 sudo ln -s /apps/webapps/DVWA DVWA
 sudo chmod -R 777 DVWA 
-sudo cp /var/www/html/DVWA/config/config.inc.php.dist /var/www/html/DVWA/config/config.inc.php 
 sudo service mysql start
 sudo mysql -u root -p
+hit Enter key
 mysql> create database dvwa;
 mysql> create user dvwa@localhost identified by 'p@ssw0rd';
 mysql> grant all on dvwa.* to dvwa@localhost;
 mysql> flush privileges;
+myqll> exit
+
+Update config:
+sudo cp /var/www/html/DVWA/config/config.inc.php.dist /var/www/html/DVWA/config/config.inc.php
 Look at https://www.google.com/recaptcha/admin add to /var/www/html/DVWA/config/config.inc.php
 allow in php.ini allow_url_include
+sudo service apache2 restart
+Open Safari / Chrome http://x.x.x.x:8001/index.php
 
-echo "Damn Vulnerable Web Application Docker container" 
+echo "Damn Vulnerable Web Applicatiohttps://portswigger.net/burp/dastardlyn Docker container" 
 sudo git clone https://github.com/opsxcq/docker-vulnerable-dvwa 
 
 #My Notes
@@ -144,13 +146,3 @@ git clone https://github.com/we45/DVFaaS-Damn-Vulnerable-Functions-as-a-Service
 
 echo "#DVCA: Damn Vulnerable Cloud Application" 
 git clone https://github.com/m6a-UdS/dvca 
- 
-
-#Run Dastardly 
-docker run --user $(id -u) --rm -v $(pwd):/tmp -e DASTARDLY_TARGET_URL=http://192.168.86.38:8000 -e DASTARDLY_OUTPUT_FILE=/tmp/dastardly-report.xml public.ecr.aws/portswigger/dastardly:latest 
-sudo pip install junit2html 
-git clone https://github.com/inorton/junit2html 
-
-cd junit2html 
-junit2html /tmp/dastardly-report.xml /tmp/dastardly-report.xml.html 
-open /Applications/Safari.app /tmp/dastardly-report.xml.html 
