@@ -3,18 +3,19 @@
 # Assumptions
 #
 # -Ubuntu Server is setup
-# -Network connectivty
-# -DNS is setup
-# -sudo apt install git –y 
+# -Network connectivty / DNS setup
 # -sudo mkdir /apps
-# -sudo mkdir /apps/webapps
-# -sudo chmod -R 777 /apps
+# -cd /apps
+# -sudo apt install git –y 
+# 
+
 
 echo "setting up DevSecOps DVWA damn vulnerable web application"
 cd /apps
 
 sudo apt install apache2 -y 
-sudo apt install docker
+sudo apt install docker -y
+sudo apt  install podman-docker -y
 sudo apt install mysql-server -y
 sudo apt install php -y
 phpVer=$(echo "/etc/php/8.1/apache2/php.ini" | sed 's/.*php\///;s/\/.*//')
@@ -23,8 +24,11 @@ sudo apt install php${phpVer}-mysql -y
 sudo cp /etc/php/${phpVer}/apache2/php.ini /etc/php/${phpVer}/apache2/php.ini.original
 sudo apt install net-tools -y 
 sudo apt install nano -y 
-sudo apt install net-tools 
-sudo apt install iputils-ping 
-sudo apt install dnsutils 
+sudo apt install net-tools -y
+sudo apt install iputils-ping -y
+sudo apt install dnsutils-y
+sudo mkdir /apps/webapps
+sudo mkdir /apps/dockerapps
+sudo chmod -R 777 /apps
 
 echo "Done"
