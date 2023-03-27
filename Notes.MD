@@ -3,7 +3,7 @@
 Credit for list provided by **Joas A Santos**.  
 https://www.linkedin.com/feed/update/urn:li:activity:7044647122381484032/ 
 
-This is a list I'm using for quick **copy and paste** when testing new Vulnerability Scanners.  I'm a **homelab junkie** trying in a controlled environment.  I've been using https://ubuntu.com server **minimized** for my base server OS.  When possible, I like to use container images 
+This is a list I'm using for quick **copy and paste** when testing new Vulnerability Scanners.  I'm a **homelab junkie** trying things in a controlled environment.  I've been using https://ubuntu.com server **minimized** for my base server OS.  When possible, I like to use container images. As I find more links, I'll add here.
  
 echo "#AWSGoat : A Damn Vulnerable AWS Infrastructure" 
 git clone https://github.com/ine-labs/AWSGoat 
