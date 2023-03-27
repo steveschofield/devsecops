@@ -41,7 +41,12 @@ sudo chmod -R 777 DVWA
 cp /var/www/html/DVWA/config/config.inc.php.dist /var/www/html/DVWA/config/config.inc.php 
 sudo service mysql start
 sudo mysql -u root -p 
-create user 'dvwa'@'127.0.0.1' identified by 'p@ssw0rd'; 
+
+mysql> create database dvwa;
+mysql> create user dvwa@localhost identified by 'p@ssw0rd';
+mysql> grant all on dvwa.* to dvwa@localhost;
+mysql> flush privileges;
+
 grant all privileges on dvwa.* to 'user'@'127.0.0.1' identified by 'pass'; 
 https://www.google.com/recaptcha/admin 
 
