@@ -36,16 +36,16 @@ echo "#Webpentest: A Damn Vulnerable Web Application"
 git clone https://github.com/digininja/DVWA
 sudo service apache2 start 
 cd /var/www/html 
-sudo ln –s /apps/webapps/DVWA DVWA
+sudo ln -s /apps/webapps/DVWA DVWA
 sudo chmod -R 777 DVWA 
-cp /var/www/html/DVWA/config/config.inc.php.dist /var/www/html/DVWA/config/config.inc.php 
+sudo cp /var/www/html/DVWA/config/config.inc.php.dist /var/www/html/DVWA/config/config.inc.php 
 sudo service mysql start
 sudo mysql -u root -p
 mysql> create database dvwa;
 mysql> create user dvwa@localhost identified by 'p@ssw0rd';
 mysql> grant all on dvwa.* to dvwa@localhost;
 mysql> flush privileges;
-Look at https://www.google.com/recaptcha/admin 
+Look at https://www.google.com/recaptcha/admin add to /var/www/html/DVWA/config/config.inc.php
 allow in php.ini allow_url_include
 
 echo "Damn Vulnerable Web Application Docker container" 
