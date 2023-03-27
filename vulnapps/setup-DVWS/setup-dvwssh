@@ -7,7 +7,8 @@
 # -sudo mkdir /apps
 # -cd /apps
 # -sudo apt install git –y 
-# 
+# -sudo apt install vim -y
+# -sudo chmod 777 /apps/devsecops/setup-dvws.sh
 
 
 echo "setting up DevSecOps DVWA damn vulnerable web application"
