@@ -16,7 +16,8 @@ cd /apps
 
 sudo apt install apache2 -y 
 sudo apt install docker -y
-sudo apt  install podman-docker -y
+#sudo apt install podman-docker -y
+sudo apt install docker.io -y
 sudo apt install mysql-server -y
 sudo apt install php -y
 phpVer=$(echo "/etc/php/8.1/apache2/php.ini" | sed 's/.*php\///;s/\/.*//')
@@ -27,7 +28,7 @@ sudo apt install net-tools -y
 sudo apt install nano -y 
 sudo apt install net-tools -y
 sudo apt install iputils-ping -y
-sudo apt install dnsutils-y
+sudo apt install dnsutils -y
 sudo mkdir /apps/webapps
 sudo mkdir /apps/dockerapps
 sudo chmod -R 777 /apps

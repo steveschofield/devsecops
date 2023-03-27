@@ -22,8 +22,7 @@ echo "#DeFi: Damn Vulnerable DeFi"
 git clone https://lnkd.in/dbWesvxW  
 
 echo "#Webpentest: A Damn Vulnerable Web Application" 
-git clone https://github.com/digininja/DVWA 
-
+ 
 #pre-script notes# 
 #-Ubuntu Server is setup
 # -Network connectivty
@@ -34,29 +33,37 @@ git clone https://github.com/digininja/DVWA
 # -sudo chmod -R 777 /apps
 
 #My Setup notes
+git clone https://github.com/digininja/DVWA
 sudo service apache2 start 
 cd /var/www/html 
 sudo ln –s /apps/webapps/DVWA DVWA
 sudo chmod -R 777 DVWA 
 cp /var/www/html/DVWA/config/config.inc.php.dist /var/www/html/DVWA/config/config.inc.php 
 sudo service mysql start
-sudo mysql -u root -p 
-
+sudo mysql -u root -p
 mysql> create database dvwa;
 mysql> create user dvwa@localhost identified by 'p@ssw0rd';
 mysql> grant all on dvwa.* to dvwa@localhost;
 mysql> flush privileges;
-
-grant all privileges on dvwa.* to 'user'@'127.0.0.1' identified by 'pass'; 
-https://www.google.com/recaptcha/admin 
+Look at https://www.google.com/recaptcha/admin 
+allow in php.ini allow_url_include
 
 echo "Damn Vulnerable Web Application Docker container" 
-git clone https://github.com/opsxcq/docker-vulnerable-dvwa 
+sudo git clone https://github.com/opsxcq/docker-vulnerable-dvwa 
 
 #My Notes
-docker build -t vulnerables/web-dvwa . 
-docker run --rm -it -p 80:80 vulnerables/web-dvwa 
-Open Safari / Chrome http://x.x.x.x/setup.php
+navigate to /apps/dockerapps/docker-vulnerable-dvwa 
+    update php.ini to enable "allow_url_include"
+    update config.ini.php to include Captcha keys 
+        *https://www.google.com/recaptcha/admin/site
+sudo docker build -t vulnerables/web-dvwa . 
+sudo docker run --rm -it -p 8001:80 vulnerables/web-dvwa 
+Open Safari / Chrome http://x.x.x.x:8001/index.php
+Login as admin / password
+Click Setup Database
+It'll take you to the login page again
+Click 
+
 
 echo "#API: A Damn Vulnerable Web Sockets" 
 git clone https://github.com/snoopysecurity/dvws-node 
@@ -110,12 +117,12 @@ echo "#DVGM: Damn Vulnerable Grade Management"
 git clone https://git.logicalhacking.com/BrowserSecurity/DVGM 
 
 echo "#Tiredful" 
-git clone https://github.com/payatu/Tiredful-API/ 
+sudo git clone https://github.com/payatu/Tiredful-API/ 
 
 #My Notes
-docker build -t 52pickup-homelab-tiredfulapi . 
-docker run -p 808:80 -it -d 52pickup-homelab-tiredfulapi  
-docker run -p 8000:8000 --name 52pickup-homelab-tiredfulapi -it 52pickup-homelab-tiredfulapi 
+sudo docker build -t homelab-tiredfulapi . 
+sudo docker run -p 8000:8000 --name homelab-tiredful -it homelab-tiredful
+Browse http://x.x.x.x:8000/scenario
 
 echo "#DVCSharp: Damn Vulnerable Cecho "# Application" 
 git clone https://github.com/appsecco/dvcsharp-api 
