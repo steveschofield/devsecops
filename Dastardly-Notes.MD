@@ -2,7 +2,7 @@
 
 https://portswigger.net/burp/dastardly
 
-Looking for a quick DAST (Dynamic application security testing) tool?  I've been focused on [DevSecOps](https://www.devsecops.org/) for a few years and passing along my testing.  
+Looking for a quick [DAST](https://www.gartner.com/en/information-technology/glossary/dynamic-application-security-testing-dast) (Dynamic application security testing) tool?  I've been focused on [DevSecOps](https://www.devsecops.org/) for a few years and passing along my testing. Dastardly offers CI/CD integration.   
 
 
 ## Run Dastardly
