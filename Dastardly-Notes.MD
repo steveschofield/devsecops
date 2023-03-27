@@ -7,7 +7,7 @@ Looking for a quick [DAST](https://www.gartner.com/en/information-technology/glo
 
 ## Run Dastardly
 
-Assumptions include
+Assumptions include:
 - Permission to run test against site! (MAKE SURE to get in writing)
 - Machine with docker installed
 - Access to the internet
@@ -15,11 +15,14 @@ Assumptions include
 `docker run --user $(id -u) --rm -v $(pwd):/tmp -e DASTARDLY_TARGET_URL=https://x.x.x.x: -e DASTARDLY_OUTPUT_FILE=/tmp/dastardly-report.xml public.ecr.aws/portswigger/dastardly:latest`
 
 ## Convert XML file to an HTML
-- sudo pip install junit2html 
+Assumptions: 
+- Server has PIP installed
+
+- sudo pip install junit2html
 - git clone [https://github.com/inorton/junit2html](https://github.com/inorton/junit2html)
 
 - cd junit2html
 - junit2html /tmp/dastardly-report.xml /tmp/dastardly-report.xml.html
 
-**I ran on my Mac**
+**Ran on a Mac**
 - open /Applications/Safari.app /tmp/dastardly-report.xml.html 
