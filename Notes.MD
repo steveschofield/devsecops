@@ -22,13 +22,13 @@ echo "#DeFi: Damn Vulnerable DeFi"
 echo "#Webpentest: A Damn Vulnerable Web Application" 
 **meant to run on local VM vs. container**
 ## Pre-script notes 
-`- Ubuntu Server is setup`
-`- Network connectivty`
- `- DNS is setup`
- `- sudo apt install git -y` 
- `- sudo mkdir /apps`
- `- sudo mkdir /apps/webapps`
- `- sudo chmod -R 777 /apps`
+- Ubuntu Server is setup`
+- Network connectivty`
+- DNS is setup
+`- sudo apt install git -y 
+ - sudo mkdir /apps
+ - sudo mkdir /apps/webapps
+ - sudo chmod -R 777 /apps
 
 **My Setup notes for DVWA**
 - git clone https://github.com/digininja/DVWA
