@@ -4,21 +4,23 @@ Credit for list provided by **Joas A Santos**.
 https://www.linkedin.com/feed/update/urn:li:activity:7044647122381484032/ 
 
 This is a list I'm using for quick **copy and paste** when testing new Vulnerability Scanners.  I'm a **homelab junkie** trying things in a controlled environment.  I've been using https://ubuntu.com server **minimized** for my base server OS.  When possible, I like to use container images. As I find more links, I'll add here.
+
+## List of Vulns apps and my individual notes
  
 echo "#AWSGoat : A Damn Vulnerable AWS Infrastructure" 
-git clone https://github.com/ine-labs/AWSGoat 
+- git clone https://github.com/ine-labs/AWSGoat 
 
 echo "#AzureGoat : A Damn Vulnerable Azure Infrastructure" 
-git clone https://github.com/JOSHUAJEBARAJ/GCP-Goat 
+- git clone https://github.com/JOSHUAJEBARAJ/GCP-Goat 
 
 echo "#GCPGoat: A Damn Vulnerable GCP Infrastructure" 
-git clone https://lnkd.in/dMVmNuvZ  
+- git clone https://lnkd.in/dMVmNuvZ  
 
 echo "#DeFi: Damn Vulnerable DeFi" 
-git clone https://lnkd.in/dbWesvxW  
+- git clone https://lnkd.in/dbWesvxW  
 
 echo "#Webpentest: A Damn Vulnerable Web Application" 
- 
+**meant to run on local VM vs. container**
 ## Pre-script notes 
 `- Ubuntu Server is setup`
 `- Network connectivty`
@@ -28,7 +30,7 @@ echo "#Webpentest: A Damn Vulnerable Web Application"
  `- sudo mkdir /apps/webapps`
  `- sudo chmod -R 777 /apps`
 
-### My Setup notes
+**My Setup notes for DVWA**
 - git clone https://github.com/digininja/DVWA
 - sudo service apache2 start 
 - cd /var/www/html 
@@ -50,12 +52,10 @@ echo "#Webpentest: A Damn Vulnerable Web Application"
 - sudo service apache2 restart
 - Open Safari / Chrome http://x.x.x.x:8001/index.php
 
-## List of Vulns apps and my individual setup notes
-
-echo "Damn Vulnerable Web Applicatiohttps://portswigger.net/burp/dastardlyn Docker container" 
+echo "Damn Vulnerable Web Application Docker container" 
 - sudo git clone https://github.com/opsxcq/docker-vulnerable-dvwa 
 
-#My Notes
+**My Notes for DVWA within container**
 - navigate to /apps/dockerapps/docker-vulnerable-dvwa 
   - update php.ini to enable "allow_url_include"
   - update config.ini.php to include Captcha keys 
@@ -122,7 +122,7 @@ echo "#DVGM: Damn Vulnerable Grade Management"
 echo "#Tiredful" 
 - sudo git clone https://github.com/payatu/Tiredful-API/ 
 
-#My Notes
+**My Notes for Tiredful api**
 - sudo docker build -t homelab-tiredfulapi . 
 - sudo docker run -p 8000:8000 --name homelab-tiredful -it homelab-tiredful
 - Browse http://x.x.x.x:8000/scenario
