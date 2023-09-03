@@ -16,7 +16,6 @@
 # -sudo chmod 777 /apps/devsecops/setup-dvws.sh
 
 echo "setting up DevSecOps DVWA damn vulnerable web application"
-cd /apps
 
 sudo apt install apache2 -y 
 sudo apt install docker -y
@@ -38,9 +37,5 @@ sudo apt install nano -y
 sudo apt install net-tools -y
 sudo apt install iputils-ping -y
 sudo apt install dnsutils -y
-
-sudo mkdir /apps/webapps
-sudo mkdir /apps/dockerapps
-sudo chmod -R 777 /apps
 
 echo "Done"
