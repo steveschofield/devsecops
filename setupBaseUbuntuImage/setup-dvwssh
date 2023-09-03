@@ -7,10 +7,9 @@
 #
 # Assumptions
 #
-# -Ubuntu Server is setup
+# -Ubuntu Server Minimal is setup
 # -Network connectivty / DNS setup
-# -sudo mkdir /apps
-# -cd /apps
+# -Assumptions DHCP setup 
 # -sudo apt install git –y 
 # -sudo apt install vim -y
 # -sudo chmod 777 /apps/devsecops/setup-dvws.sh
@@ -19,11 +18,10 @@ echo "setting up DevSecOps DVWA damn vulnerable web application"
 
 sudo apt install apache2 -y 
 sudo apt install docker -y
-#sudo apt install podman-docker -y
 sudo apt install docker.io -y
 sudo apt install mysql-server -y
 sudo apt install php -y
-#
+
 #sed 's|/|\n|g' replaces all occurrences of '/' with a new line character '\n'.
 #steve = php --version | grep built
 #steve | sed 's/.* \([0-9]\{1,\}\.[0-9]\{1,\}\.[0-9]\{1,\}\) .*/\1/'
